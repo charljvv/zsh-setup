@@ -29,7 +29,7 @@ choco install docker-desktop
 choco feature disable -n allowGlobalConfirmation
 
 echo "#############################################"
-echo "Restart your shell and run dev2-node.ps1 if you want to install a node version with NVM"
+echo "After starting a new shell, run node.ps1 for a nodeJS installation, powerline.ps1 for Powerline fonts."
 echo "#############################################"
 echo "ZSHELL SETUP:"
 echo "1. Login WSL"
