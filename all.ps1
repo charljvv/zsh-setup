@@ -1,10 +1,24 @@
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco feature enable -n allowGlobalConfirmation
 
+choco install git
+
 choco install microsoft-teams
 choco install slack
+choco install zoom
+choco install whatsapp
 
-choco install git
+#choco install telegram
+#choco install signal
+
+choco install adobereader
+
+choco install googlechrome
+choco install firefox
+choco install microsoft-edge
+
+choco install icue
+
 choco install vscode 
 
 choco install jetbrainstoolbox
@@ -18,9 +32,11 @@ choco install python3 --params "/InstallDir:C:\Python\Python3"
 choco install nvm
 
 choco install cmder
+#cp .\cmder-setup\user-ConEmu.xml C:/Tools/cmder/config/user-ConEmu.xml
 
 choco install vlc
 choco install spotify
+choco install k-litecodecpackfull
 
 choco install wsl2
 choco install wsl-ubuntu-2004

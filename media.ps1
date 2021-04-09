@@ -3,5 +3,6 @@ choco feature enable -n allowGlobalConfirmation
 
 choco install vlc
 choco install spotify
+choco install adobereader
 
 choco feature disable -n allowGlobalConfirmation
