@@ -76,6 +76,27 @@ choco install zoom
 choco install whatsapp
 ```
 
+`dev.ps1` is specifically for development tools/frameworks:
+
+```
+choco install git
+choco install vscode 
+
+choco install jetbrainstoolbox
+choco install dbeaver
+
+choco install javaruntime
+choco install openjdk
+#choco install jdk11 -params 'installdir=c:\\JDKs\jdk11'
+
+choco install python3 --params "/InstallDir:C:\Python\Python3"
+choco install nvm
+
+choco install cmder
+```
+Notice the `InstallDir` for Python, this can be modified as per the documentation for that specific package.
+
+
 You can split this as you see fit or just throw all of them into one script for maximum automation POWER 
 
 ![Unlimted power](https://media.giphy.com/media/3o84sq21TxDH6PyYms/giphy.gif)
