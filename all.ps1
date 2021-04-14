@@ -10,6 +10,8 @@ choco install whatsapp
 
 #choco install telegram
 #choco install signal
+#choco install skype
+#choco install skypeforbusiness
 
 choco install adobereader
 
@@ -25,8 +27,8 @@ choco install jetbrainstoolbox
 choco install dbeaver
 
 choco install javaruntime
-choco install jdk8 -params 'installdir=c:\\JDKs\jdk8'
-choco install jdk11 -params 'installdir=c:\\JDKs\jdk11'
+##choco install jdk8 -params 'installdir=c:\\JDKs\\jdk8'
+choco install openjdk
 
 choco install python3 --params "/InstallDir:C:\Python\Python3"
 choco install nvm
