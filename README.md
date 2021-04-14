@@ -1,4 +1,4 @@
-# Automated AF
+# Automated Setup
 
 Dev environment setup, the bane of any consultant's existence. 
 Your usual go-to for dev setup is easy, you clone your personal configuration repo, run a good old `sudo ./install-all-the-things.sh` and awaaaay we go! 
@@ -12,7 +12,7 @@ So what does that mean for me the 1337 linux haxor?
 You can automate the **** out of your windows application installs now.
 Combine Choco and Powershell (as admin) and new dev machine setups are a breeze.
 
-NOTICE: You do require Admin rights on the machine for this to work though, soooo goodluck getting that request approved :D 
+**NOTE:** You do require Admin rights on the machine for this to work though, soooo goodluck getting that request approved 😂
 
 Once you have choco installed and running (which the devs have made easy with a nice one-liner powershell command). 
 ```
@@ -20,11 +20,15 @@ Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManage
 ```
 
 You can now start installing applications.
-The syntax `choco install THE_APP_NAME_YOU_WANT_TO_INSTALL` 
-eg. `choco install git`
-The list of available applications can be found at https://community.chocolatey.org/packages 
+The syntax 
 
-NOTE: choco installs require scripts to be run in an escalated powershell (powershell as admin) terminal to function correctly. In most cases choco will warn you if it detects you don't have the relevant permissions to install unsupervised applications.
+`choco install THE_APP_NAME_YOU_WANT_TO_INSTALL`
+
+eg. `choco install git`
+
+The list of available applications can be found at [Packages](https://community.chocolatey.org/packages)
+
+**NOTE:** choco installs require scripts to be run in an escalated powershell (powershell as admin) terminal to function correctly. In most cases choco will warn you if it detects you don't have the relevant permissions to install unsupervised applications.
 
 Great! But do I have to now run this command manually for every app I want to install? Well, kind-of! 
 You can setup a powershell script like:
@@ -80,9 +84,11 @@ choco install wsl-ubuntu-2004
 
 Check out my git for a list of all the scripts and the chunky `all.ps1`. 
 
-https://github.com/charljvv/zsh-setup/blob/main/all.ps1
+[Install script](https://github.com/charljvv/zsh-setup/blob/main/all.ps1)
 
-This was initially setup to copy my zsh configurations.
+[Github page](https://github.com/charljvv/zsh-setup)
+
+This was initially setup to configure `oh-my-zsh` checkout that section the repo if you're interested in automating Cmder, Zsh, oh-my-zsh on WSL.
 
 # Instructions:
 Run the `all.ps1` script in an escalated powershell (powershell as admin).
@@ -94,7 +100,7 @@ ZShell setup is a bit more involved, so see the seperate section on that.
 ## Powerline Fonts
 1. Run `./powerline.ps1`
 
-## ZSHELL SETUP (Requires WSL to be installed and functional)
+## Oh-my-zshell Setup (Requires WSL to be installed and functional)
 0. (Optionally run `./wsl.ps1`)
 1. Login WSL
 2. clone: https://github.com/charljvv/zsh-setup.git
