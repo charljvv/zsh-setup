@@ -71,12 +71,11 @@ You can split this as you see fit or just throw all of them into one script for 
 
 You could take this a step further by setting up `wsl2`, but that's out of scope for this topic.
 
-`super-leet-haxor.ps1` 
+`wsl.ps1` 
 
 ```
 choco install wsl2
 choco install wsl-ubuntu-2004
-choco install docker-desktop
 ```
 
 Check out my git for a list of all the scripts and the chunky `all.ps1`. 
