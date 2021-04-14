@@ -3,7 +3,9 @@
 Dev environment setup, the bane of any consultant's existence. 
 Your usual go-to for dev setup is easy, you clone your personal configuration repo, run a good old `sudo ./install-all-the-things.sh` and awaaaay we go! 
 
-That's all well and good, but this isn't Mr.Robot and you're assigned a locked down Windows machine by your client. They have policies in place to not allow your custom-built 1337 Linux on their precious intra-net. 
+That's all well and good, but this isn't Mr.Robot and you're assigned a locked down Windows machine by your client. 
+
+They have policies in place to not allow your custom-built 1337 Linux on their precious intra-net. 
 
 ![Mr.Robot](https://media.giphy.com/media/l0K4ovRrRJSs1A4XS/giphy.gif)
 
@@ -15,7 +17,9 @@ But what about my haxor shell script that I've perfected over the years? No apt-
 To quote from their site: `Chocolatey has the largest online registry of Windows packages. Chocolatey packages encapsulate everything required to manage a particular piece of software into one deployment artifact by wrapping installers, executables, zips, and/or scripts into a compiled package file.`
 
 So what does that mean for me the 1337 linux haxor?
+
 You can automate the **** out of your windows application installs now.
+
 Combine Choco and Powershell (as admin) and new dev machine setups are a breeze.
 
 **NOTE:** You do require Admin rights on the machine for this to work though, soooo goodluck getting that request approved 😂
@@ -34,7 +38,9 @@ eg. `choco install git`
 
 The list of available applications can be found at [Packages](https://community.chocolatey.org/packages)
 
-**NOTE:** choco installs require scripts to be run in an escalated powershell (powershell as admin) terminal to function correctly. In most cases choco will warn you if it detects you don't have the relevant permissions to install unsupervised applications.
+**NOTE:** choco installs require scripts to be run in an escalated powershell (powershell as admin) terminal to function correctly. 
+
+In most cases choco will warn you if it detects you don't have the relevant permissions to install unsupervised applications.
 
 Great! But do I have to now run this command manually for every app I want to install? Well, kind-of! 
 You can setup a powershell script like:
@@ -53,8 +59,11 @@ choco feature disable -n allowGlobalConfirmation
 ```
 
 Firstly, this will enable the "allowGlobalConfirmation" flag so Choco doesn't prompt you to confirm every installation.
+
 Secondly, will run each install candidate as per the script, in order.
+
 Lastly, disable the allowGlobalConfirmation, so you don't accidently confirm new installs when adding stuff manually.
+
 Neat! Now start adding apps to your powershell script for future installs. I've split mine into seperate scripts per category.
 
 `media.ps1` for example contains:
