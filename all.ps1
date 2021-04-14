@@ -40,9 +40,9 @@ choco install vlc
 choco install spotify
 choco install k-litecodecpackfull
 
-choco install wsl2
-choco install wsl-ubuntu-2004
-choco install docker-desktop
+#choco install wsl2
+#choco install wsl-ubuntu-2004
+#choco install docker-desktop
 
 choco feature disable -n allowGlobalConfirmation
 
