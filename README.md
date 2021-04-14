@@ -2,10 +2,16 @@
 
 Dev environment setup, the bane of any consultant's existence. 
 Your usual go-to for dev setup is easy, you clone your personal configuration repo, run a good old `sudo ./install-all-the-things.sh` and awaaaay we go! 
-That's all well and good, but this isn't Mr.Robot and you're assigned a locked down Windows machine by your client. They have policies in place to not allow your custom-built 1337 Linux on their precious intra-net. (Precious Gif)
 
-CRIES! But what about my haxor shell script that I've perfected over the years? No apt-get for you this time my friend!
-Solution: Chocolatey: https://community.chocolatey.org/ , a package manager for Windows.
+That's all well and good, but this isn't Mr.Robot and you're assigned a locked down Windows machine by your client. They have policies in place to not allow your custom-built 1337 Linux on their precious intra-net. 
+
+![Mr.Robot](https://media.giphy.com/media/l0K4ovRrRJSs1A4XS/giphy.gif)
+
+
+But what about my haxor shell script that I've perfected over the years? No apt-get for you this time my friend!
+
+**Solution:** [Chocolatey](https://community.chocolatey.org/), a package manager for Windows.
+
 To quote from their site: `Chocolatey has the largest online registry of Windows packages. Chocolatey packages encapsulate everything required to manage a particular piece of software into one deployment artifact by wrapping installers, executables, zips, and/or scripts into a compiled package file.`
 
 So what does that mean for me the 1337 linux haxor?
@@ -71,7 +77,8 @@ choco install whatsapp
 ```
 
 You can split this as you see fit or just throw all of them into one script for maximum automation POWER 
-(Palaptine meme)
+
+![Unlimted power](https://media.giphy.com/media/3o84sq21TxDH6PyYms/giphy.gif)
 
 You could take this a step further by setting up `wsl2`, but that's out of scope for this topic.
 
