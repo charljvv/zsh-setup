@@ -1,4 +1,4 @@
-# Automated Setup
+# Automated Dev Environment Setup
 
 Dev environment setup, the bane of any consultant's existence. 
 Your usual go-to for dev setup is easy, you clone your personal configuration repo, run a good old `sudo ./install-all-the-things.sh` and awaaaay we go! 
@@ -18,9 +18,11 @@ To quote from their site: `Chocolatey has the largest online registry of Windows
 
 So what does that mean for me the 1337 linux haxor?
 
-You can automate the **** out of your windows application installs now.
+You can automate most of your Windows (probably 10) application installs!
 
-Combine Choco and Powershell (as admin) and new dev machine setups are a breeze.
+Combine Choco and Powershell (as admin) and dev environment setup is a breeze.
+
+## Installation
 
 **NOTE:** You do require Admin rights on the machine for this to work though, soooo goodluck getting that request approved 😂
 
@@ -29,6 +31,7 @@ Once you have choco installed and running (which the devs have made easy with a 
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 ```
 
+## Usage
 You can now start installing applications.
 The syntax 
 
@@ -66,7 +69,7 @@ Lastly, disable the allowGlobalConfirmation, so you don't accidently confirm new
 
 Neat! Now start adding apps to your powershell script for future installs. I've split mine into seperate scripts per category.
 
-`media.ps1` for example contains:
+[`media.ps1`](https://github.com/charljvv/zsh-setup/blob/main/media.ps1) for example contains:
 
 ```
 choco install vlc
@@ -76,7 +79,7 @@ choco install k-litecodecpackfull
 ``` 
 and 
 
-`comms.ps1` contains:
+[`comms.ps1`](https://github.com/charljvv/zsh-setup/blob/main/comms.ps1) contains:
 
 ```
 choco install microsoft-teams
@@ -85,7 +88,7 @@ choco install zoom
 choco install whatsapp
 ```
 
-`dev.ps1` is specifically for development tools/frameworks:
+[`dev.ps1`](https://github.com/charljvv/zsh-setup/blob/main/dev.ps1) is specifically for development tools/frameworks:
 
 ```
 choco install git
@@ -106,26 +109,37 @@ choco install cmder
 Notice the `InstallDir` for Python, this can be modified as per the documentation for that specific package.
 
 
+Even hardware specific driver installations like:
+
+[`hardware.ps1](https://github.com/charljvv/zsh-setup/blob/main/hardware.ps1)
+
+```
+choco install icue
+choco install nvidia-display-driver
+```
+
 You can split this as you see fit or just throw all of them into one script for maximum automation POWER 
 
-![Unlimted power](https://media.giphy.com/media/3o84sq21TxDH6PyYms/giphy.gif)
+![Unlimited power](https://media.giphy.com/media/3o84sq21TxDH6PyYms/giphy.gif)
 
-You could take this a step further by setting up `wsl2`, but that's out of scope for this topic.
+## Updating
+Choco has the ability to update your installed packages. 
 
-`wsl.ps1` 
+Updating a specific app, `choco update APP_NAME` or `choco update all` will update all applications installed via Choco.
+The apt equivalent of this would be `apt-get update && apt-get upgrade` 
 
-```
-choco install wsl2
-choco install wsl-ubuntu-2004
-```
 
-Check out my git for a list of all the scripts and the chunky `all.ps1`. 
+## Sources and further reading:
 
-[Install script](https://github.com/charljvv/zsh-setup/blob/main/all.ps1)
+Check out my git for a list of all the scripts and the chunky [`all.ps1`](https://github.com/charljvv/zsh-setup/blob/main/all.ps1)
 
 [Github page](https://github.com/charljvv/zsh-setup)
 
-This was initially setup to configure `oh-my-zsh` checkout that section the repo if you're interested in automating Cmder, Zsh, oh-my-zsh on WSL.
+
+## Further experimentation 
+
+The purpose of this project was initially to configure my `oh-my-zsh` configuration. If you're interested in automating Cmder, Zsh, oh-my-zsh on WSL, have a look at The `Oh-my-zshell Setup` on git.
+
 
 # Instructions:
 Run the `all.ps1` script in an escalated powershell (powershell as admin).
